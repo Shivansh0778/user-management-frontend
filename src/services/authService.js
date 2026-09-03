@@ -1,5 +1,7 @@
+const API_URL = import.meta.env.VITE_API_URL;
+
 export const signup = async (user) => {
-  const response = await fetch("http://localhost:3000/auth/signup", {
+  const response = await fetch(`${API_URL}/auth/signup`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -11,7 +13,7 @@ export const signup = async (user) => {
 };
 
 export const login = async (user) => {
-  const response = await fetch("http://localhost:3000/auth/login", {
+  const response = await fetch(`${API_URL}/auth/login`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -29,7 +31,7 @@ export const login = async (user) => {
 export const getMe = async () => {
   const token = localStorage.getItem("token");
 
-  const response = await fetch("http://localhost:3000/auth/me", {
+  const response = await fetch(`${API_URL}/auth/me`, {
     method: "GET",
     headers: {
       Authorization: `Bearer ${token}`,
@@ -45,7 +47,7 @@ export const getMe = async () => {
 };
 
 export const forgotPassword = async (email) => {
-  const response = await fetch("http://localhost:3000/auth/forgot-password", {
+  const response = await fetch(`${API_URL}/auth/forgot-password`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -59,7 +61,7 @@ export const forgotPassword = async (email) => {
 };
 
 export const resetPassword = async (resetData) => {
-  const response = await fetch("http://localhost:3000/auth/reset-password", {
+  const response = await fetch(`${API_URL}/auth/reset-password`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

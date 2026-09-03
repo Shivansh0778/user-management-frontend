@@ -1,8 +1,8 @@
-
+const API_URL = import.meta.env.VITE_API_URL;
 
 export async function createUser(user) {
   const token = localStorage.getItem("token");
-  const response = await fetch("http://localhost:3000/", {
+  const response = await fetch(`${API_URL}/`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -21,7 +21,7 @@ export async function createUser(user) {
 
 export async function updateUser(id, user) {
   const token = localStorage.getItem("token");
-  const response = await fetch(`http://localhost:3000/${id}`, {
+  const response = await fetch(`${API_URL}/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -40,7 +40,7 @@ export async function updateUser(id, user) {
 
 export async function deleteUser(id){
   const token = localStorage.getItem("token");
-    const response = await  fetch(`http://localhost:3000/${id}`, {
+    const response = await  fetch(`${API_URL}/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,
