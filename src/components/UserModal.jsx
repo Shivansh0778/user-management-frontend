@@ -21,7 +21,7 @@ const UserModal = ({ user, mode, onClose, onUpdate }) => {
 
     if (response.ok) {
       toast.success("User updated successfully");
-      onUpdate(data);
+      onUpdate({ ...data.user, _id: data.user.id });
     } else {
       toast.error(data.message || "Failed to update user");
     }
