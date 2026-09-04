@@ -90,9 +90,10 @@ const AddUser = () => {
     <>
       <Navbar />
 
-      <div className=" flex  text-neutral-100 font-sans p-10 gap-10">
+      <div className="flex flex-col md:flex-row text-neutral-100 font-sans p-4 md:p-10 gap-6 md:gap-10">
         {/* Left Panel */}
-        <div className="flex-1 bg-neutral-200 p-2 rounded-lg h-180">
+
+        <div className="hidden md:block flex-1 bg-neutral-200 p-2 rounded-lg h-180">
           <img
             className="w-full h-full object-cover rounded"
             src="https://images.unsplash.com/photo-1773332598413-a6d5279d1ae8?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -101,8 +102,8 @@ const AddUser = () => {
         </div>
 
         {/* Right Panel */}
-        <div className="flex-1 flex flex-col bg-neutral-950 pr-10 pl-10 border border-neutral-800 rounded-lg">
-          <div className="mt-10 text-2xl mb-10 flex items-center flex-col gap-2">
+        <div className="flex-1 flex flex-col justify-center bg-neutral-950 px-5 md:px-10 py-8 md:py-10 border border-neutral-800 rounded-lg">
+          <div className="mt-8 md:mt-10 text-xl md:text-2xl mb-6 md:mb-10 flex items-center flex-col gap-2 text-center">
             <h2>User Registration</h2>
 
             <p className="text-sm text-neutral-400">
@@ -117,7 +118,7 @@ const AddUser = () => {
           <form
             onSubmit={handleSubmit}
             noValidate
-            className="flex flex-col gap-5 mt-8"
+            className="flex flex-col gap-4 md:gap-5 mt-6 md:mt-8"
           >
             {/* Name */}
             <div className="flex flex-col gap-2">

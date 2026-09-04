@@ -6,12 +6,12 @@ const Home = () => {
       <Navbar />
 
       <div className="min-h-screen bg-neutral-900 text-neutral-100 flex justify-center">
-        <div className="mt-45 max-w-4xl text-center">
+        <div className="mt-24 md:mt-45 max-w-4xl text-center px-4">
           <p className="text-sm uppercase tracking-[0.3em] text-neutral-500 mb-5">
             User Management System
           </p>
 
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
+          <h1 className="text-4xl md:text-7xl font-bold tracking-tight">
             Manage your users
             <br />
             <span className="text-neutral-500">with simplicity.</span>
@@ -22,17 +22,17 @@ const Home = () => {
             protected access and user management features.
           </p>
 
-          <div className="flex justify-center gap-4 mt-10">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-4 mt-8 md:mt-10">
             <a
               href="/signup"
-              className="bg-white text-black px-6 py-3 rounded font-semibold text-sm hover:bg-neutral-200"
+              className="w-40 bg-white text-black px-6 py-3 rounded font-semibold text-sm hover:bg-neutral-200"
             >
               Create Account
             </a>
 
             <a
               href="/login"
-              className="border border-neutral-700 px-6 py-3 rounded font-semibold text-sm hover:bg-neutral-800"
+              className="w-40 border border-neutral-700 px-6 py-3 rounded font-semibold text-sm hover:bg-neutral-800"
             >
               Login
             </a>

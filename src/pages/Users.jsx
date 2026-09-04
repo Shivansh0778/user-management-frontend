@@ -55,35 +55,33 @@ const Users = () => {
 
       <div className="min-h-screen bg-neutral-100 text-neutral-900 p-6 md:p-10">
         <div className="max-w-7xl mx-auto">
-
           {/* Page Header */}
-          <div className="flex items-end justify-between mb-10">
-
+          {/* Page Header */}
+          <div className="flex flex-col gap-5 mb-8 md:flex-row md:items-end md:justify-between md:mb-10">
             <div>
-              <p className="text-xs uppercase tracking-widest text-neutral-500">
+              <p className="text-[10px] md:text-xs uppercase tracking-widest text-neutral-500">
                 User Management
               </p>
 
-              <h1 className="text-4xl font-bold mt-2 text-neutral-900">
+              <h1 className="text-3xl md:text-4xl font-bold mt-1 md:mt-2 text-neutral-900">
                 Users
               </h1>
 
-              <p className="text-neutral-500 mt-2">
+              <p className="text-sm md:text-base text-neutral-500 mt-1 md:mt-2">
                 Manage all registered users from one place.
               </p>
             </div>
 
             {/* Total Users */}
-            <div className="bg-white border border-neutral-200 rounded-xl px-6 py-4 shadow-sm">
-              <p className="text-xs uppercase tracking-widest text-neutral-500">
+            <div className="bg-white border border-neutral-200 rounded-xl px-4 py-3 md:px-6 md:py-4 shadow-sm w-fit">
+              <p className="text-[10px] md:text-xs uppercase tracking-widest text-neutral-500">
                 Total Users
               </p>
 
-              <p className="text-2xl font-bold mt-1 text-neutral-900">
+              <p className="text-xl md:text-2xl font-bold mt-1 text-neutral-900">
                 {users.length}
               </p>
             </div>
-
           </div>
 
           {/* Users */}
@@ -118,7 +116,6 @@ const Users = () => {
           {/* Delete Confirmation */}
           {deleteUser && (
             <div className="fixed top-24 left-1/2 -translate-x-1/2 bg-white border border-neutral-200 rounded-xl p-6 w-96 z-50 shadow-xl">
-
               <h2 className="text-xl font-semibold text-neutral-900">
                 Delete User
               </h2>
@@ -132,7 +129,6 @@ const Users = () => {
               </p>
 
               <div className="flex gap-3 mt-6">
-
                 <button
                   type="button"
                   onClick={() => setDeleteUser(null)}
@@ -148,12 +144,9 @@ const Users = () => {
                 >
                   Delete
                 </button>
-
               </div>
-
             </div>
           )}
-
         </div>
       </div>
     </>
